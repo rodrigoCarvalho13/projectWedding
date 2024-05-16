@@ -1,0 +1,31 @@
+USANDO NEXT JS
+
+- rodar npm init na pasta do projeto
+- rodar o npm install next react react-dom
+- no arquivo package.json, substituir a sessão scripts por:
+	"scripts": {
+	   "dev": "next dev",
+	   "build": "next build && next export",
+	   "start": "next start"
+	}
+- criar dentro da pasta do projeto, a pasta 'pages', onde ficarão os arquivos principais
+- dentro da pasta 'pages', criar um arquivo 'index.js' e colocar o seguinte código:
+	function HomePage() {
+	   return <div>Welcome to Next.Js!</div>
+	}
+	
+	export default HomePage
+
+- rodar npm run dev para abrir o servidor local no localhost:3000 (sempre que for mexer no projeto)
+- todas as páginas criadas devem ser criadas dentro da pasta 'pages' e devem ter a função acima ^
+- o código html das páginas deve estar dentro dos () após o return
+- links podem ser utilizados pelo react/next com - import Link from 'next/link' - no inicio do 
+projeto e depois, no local do link, usar <Link href="local da página"> (deixa o load mais rápido)
+- para manipular o css de forma global (dentro da primeira div): 
+	<style jsx global>{`
+	   body {background-color:black;}
+	`}
+	</style>
+- para classes usar 'className'
+- para css modular, criar um arquivo na pasta 'pages' de nome index.module.css e importar este
+no index principal, usando -import style from'./index.module.css'- no início do documento
